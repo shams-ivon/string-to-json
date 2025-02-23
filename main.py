@@ -9,8 +9,7 @@ frame.geometry('800x500')
 # Function for getting input and displaying it
 def printJSON(): 
     inp = inputtxt.get(1.0, "end-1c") 
-    json_object = json.loads(inp)
-    formatted_json = json.dumps(json_object, indent=2)
+    formatted_json = json.dumps(json.loads(inp), indent=2)
     outputtxt.delete(1.0, "end")  
     outputtxt.insert(tk.END, formatted_json)  
 
